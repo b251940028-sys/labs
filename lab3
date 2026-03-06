@@ -1,0 +1,31 @@
+package lab3;
+public class savingclass {
+private String ner;
+private String valut;
+private double huu;
+private int sar;
+private double uldegdel;
+public void Savings(String ner, String valut, double huu, int sar, double uldegdel) {
+	this.ner = ner;
+	this.valut = valut;
+	this.huu = huu;
+	this.sar = sar;
+	this.uldegdel = uldegdel;
+}
+private double savingscalcaccrued() {
+	return uldegdel * (huu / 12) * sar / 100;
+}
+private double savingscalc() {
+	return uldegdel + savingscalcaccrued();
+}
+public void printInfo() {
+    System.out.println("----- Хадгаламжийн мэдээлэл -----");
+    System.out.println("Нэр: " + ner);
+    System.out.println("Валют: " + valut);
+    System.out.println("Жилийн хүү: " + huu + "%");
+    System.out.println("Хугацаа: " + sar + " сар");
+    System.out.println("Эхний үлдэгдэл: " + uldegdel);
+    System.out.println("Хуримтлагдсан хүү: " + savingscalcaccrued());
+    System.out.println("Эцсийн үлдэгдэл: " + savingscalc());
+}
+}
